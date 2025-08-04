@@ -80,6 +80,7 @@ body {
   width: fit-content;
   position: relative;
   animation: slideIn 0.3s ease-out;
+  font-family: Calibri,Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
 

@@ -1,6 +1,7 @@
 
 export const resumeInfo = {
-    // messages for each step of the resume creation process
+      objective: "You are an expert resume formatter. Generate a professional, ATS-friendly resume in Markdown format.After eacg section give one line and dont give extra space between sections. Also, give the name section at the top midlle of the page. Give all this in Markdown format. Do not give any extra text or explanation. Just give the resume in markdown format.",
+
       welcome: "Hello! I'm your AI Resume Assistant 🤖. I'll help you create a professional resume through our conversation. Let's start with your full name.",
       
       name: "Perfect! Now I need your contact information. Please provide the following:\n\n- Email Address\n- Phone Number\n- LinkedIn Profile (Optional)\n- Location (City, State)\n\nThis will help employers reach you easily.",

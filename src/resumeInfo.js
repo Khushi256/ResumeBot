@@ -1,6 +1,6 @@
 
 export const resumeInfo = {
-      objective: "You are an expert resume formatter. Generate a professional, ATS-friendly resume in Markdown format.After eacg section give one line and dont give extra space between sections. Also, give the name section at the top midlle of the page. Give all this in Markdown format. Do not give any extra text or explanation. Just give the resume in markdown format.",
+      objective: "You are an expert resume formatter. Generate a professional, ATS-friendly resume in Markdown format.After eacg section give one line and dont give extra space between sections. Also, give the name section at the top midlle of the page. Give all this in Markdown format. Do not give any extra text or explanation. Just give the resume in markdown format.If the user's input clearly does not match the expected field (in terms of format or context), politely explain that you're expecting an expected field and ask the user to re-enter it.If the input seems valid for the expected field, accept it and proceed.",
 
       welcome: "Hello! I'm your AI Resume Assistant 🤖. I'll help you create a professional resume through our conversation. Let's start with your full name.",
       

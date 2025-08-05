@@ -1,12 +1,60 @@
-# React + Vite
+# ResumeBot 💼🤖
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**AI-Powered Resume Generator using Gemini API**
 
-Currently, two official plugins are available:
+ResumeBot is a smart and intuitive resume builder that collects user information through a **chat-based interface** and generates a **clean, ATS-friendly resume** in your preferred format (Markdown or LaTeX). Built with modern frontend tools and powered by Google's **Gemini API**, it simplifies the resume-making process into a conversation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![ResumeBot Screenshot](./screenshot.png)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+-  AI Resume Assistant using Gemini API
+-  Conversational form input via chatbot
+-  Supports output in **Markdown** or **LaTeX**
+-  Easy **PDF download** with styling preserved
+-  Generates resumes that are **ATS-friendly**
+-  Clean UI with modern design
+
+---
+
+## 🚀 How It Works
+
+1. User chats with the ResumeBot to provide basic details (name, email, phone, skills, projects, etc.)
+2. The bot sends the structured prompt to Gemini API to generate the resume content.
+3. The user selects the desired format (Markdown or LaTeX).
+4. Just copy the generated resume and convert it to PDF using any free online converter.
+> 💡 *Future Goal:* Enable one-click PDF download directly from the app.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React.js, Tailwind CSS
+- **AI Integration**: Gemini API
+- **PDF Generation**: jsPDF + html2canvas (for HTML), or LaTeX rendering
+- **State Management**: useState, useEffect, useRef (React Hooks)
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/Khushi256/ResumeBot.git
+cd ResumeBot
+npm install
+npm install axios html2canvas jspdf
+npm run dev
+```
+---
+
+## 🤝 Contributing
+
+Feel free to fork this repo, make improvements, and submit a pull request. All contributions are welcome!
+
+---
+
+## 📄 License
+
+Licensed under the [MIT License](LICENSE) — free to use, modify, and distribute.

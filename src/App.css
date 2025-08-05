@@ -175,7 +175,49 @@ button:hover {
   align-items: center;
   margin-bottom: 10px;
 }
-/* Enhanced Responsive Design */
+@media (max-width: 360px) {
+  .container {
+    margin: 0;
+    border-radius: 0;
+  }
+  
+  .header {
+    padding: 8px 12px;
+  }
+  
+  .logo-text {
+    font-size: 18px;
+  }
+  
+  .logo-subtitle {
+    font-size: 12px;
+  }
+  
+  .body {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+  
+  .bot-message,
+  .user-message {
+    font-size: 12px;
+    padding: 6px 10px;
+    max-width: 95%;
+  }
+  
+  .footer {
+    padding: 6px 10px;
+  }
+  
+  .message-input {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+  
+  .send-button {
+    padding: 4px 6px;
+  }
+}
 @media (max-width: 1024px) {
   .container {
     max-width: 90%;
@@ -185,18 +227,19 @@ button:hover {
 
 @media (max-width: 768px) {
   body {
-    overflow: auto;
+    overflow: hidden;
   }
   
   .container {
-    margin: 10px;
-    height: calc(100vh - 20px);
+    margin: 0;
+    height: 100vh;
     max-width: none;
-    border-radius: 16px;
+    border-radius: 0;
   }
   
   .header {
-    padding: 16px 20px;
+    padding: 12px 20px;
+    flex-shrink: 0;
   }
   
   .logo-text {
@@ -211,6 +254,8 @@ button:hover {
   .body {
     padding: 16px 20px;
     gap: 16px;
+    min-height: 0;
+    flex: 1;
   }
   
   .bot-message,
@@ -223,35 +268,37 @@ button:hover {
   
   .message-input {
     font-size: 14px;
-    padding: 12px 14px;
+    padding: 10px 14px;
     border-radius: 12px;
   }
   
   .send-button {
-    padding: 10px 12px;
+    padding: 8px 10px;
   }
   
   .footer {
-    padding: 12px 16px;
+    padding: 10px 16px;
+    flex-shrink: 0;
   }
   
   .top-section {
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
-    margin-bottom: 8px;
+    gap: 6px;
+    margin-bottom: 6px;
   }
 }
 
 @media (max-width: 480px) {
   .container {
-    margin: 5px;
-    height: calc(100vh - 10px);
-    border-radius: 12px;
+    margin: 0;
+    height: 100vh;
+    border-radius: 0;
   }
   
   .header {
-    padding: 12px 16px;
+    padding: 10px 16px;
+    flex-shrink: 0;
   }
   
   .logo-text {
@@ -263,47 +310,54 @@ button:hover {
   }
   
   .body {
-    padding: 12px 16px;
-    gap: 12px;
+    padding: 10px 16px;
+    gap: 10px;
+    min-height: 0;
+    flex: 1;
   }
   
   .bot-message,
   .user-message {
     font-size: 13px;
-    padding: 10px 14px;
+    padding: 8px 12px;
     max-width: 90%;
     border-radius: 14px;
   }
   
   .footer {
-    padding: 10px 14px;
+    padding: 8px 14px;
+    flex-shrink: 0;
   }
   
   .chat-form {
-    gap: 8px;
+    gap: 6px;
   }
   
   .message-input {
     font-size: 13px;
-    padding: 10px 12px;
+    padding: 8px 12px;
     border-radius: 10px;
   }
   
   .send-button {
-    padding: 8px 10px;
+    padding: 6px 8px;
     border-radius: 12px;
   }
   
   .top-section {
-    gap: 6px;
-    margin-bottom: 6px;
+    gap: 4px;
+    margin-bottom: 4px;
   }
 }
 
 @media (max-width: 360px) {
   .container {
-    margin: 3px;
-    border-radius: 10px;
+    margin: 0;
+    border-radius: 0;
+  }
+  
+  .header {
+    padding: 8px 12px;
   }
   
   .logo-text {
@@ -314,44 +368,75 @@ button:hover {
     font-size: 12px;
   }
   
+  .body {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+  
   .bot-message,
   .user-message {
     font-size: 12px;
-    padding: 8px 12px;
+    padding: 6px 10px;
     max-width: 95%;
+  }
+  
+  .footer {
+    padding: 6px 10px;
   }
   
   .message-input {
     font-size: 12px;
-    padding: 8px 10px;
+    padding: 6px 8px;
   }
   
   .send-button {
-    padding: 6px 8px;
+    padding: 4px 6px;
   }
 }
 
-/* Landscape orientation adjustments for mobile */
 @media (max-height: 500px) and (orientation: landscape) {
   .container {
-    height: calc(100vh - 10px);
-    margin: 5px auto;
+    height: 100vh;
+    margin: 0;
+    border-radius: 0;
   }
   
   .header {
-    padding: 10px 20px;
+    padding: 6px 16px;
+    flex-shrink: 0;
   }
   
   .logo-text {
-    font-size: 20px;
+    font-size: 18px;
+  }
+  
+  .logo-subtitle {
+    font-size: 12px;
   }
   
   .body {
-    padding: 10px 20px;
-    gap: 10px;
+    padding: 8px 16px;
+    gap: 8px;
+    min-height: 0;
+    flex: 1;
   }
   
   .footer {
-    padding: 8px 16px;
+    padding: 6px 12px;
+    flex-shrink: 0;
+  }
+  
+  .bot-message,
+  .user-message {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+  
+  .message-input {
+    padding: 6px 10px;
+  }
+  
+  .send-button {
+    padding: 4px 6px;
   }
 }

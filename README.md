@@ -49,6 +49,16 @@ npm run dev
 ```
 ---
 
+## 🌐 Deployment
+
+This is a **frontend-only project**, deployed using **Vercel**.
+Vercel made the deployment process extremely fast and simple — with just a few clicks and no configuration, the app was live within seconds.
+
+You can view the live project here:  
+👉 [https://resume-bot.vercel.app/](https://resume-bot.vercel.app/)
+
+---
+
 ## 🤝 Contributing
 
 Feel free to fork this repo, make improvements, and submit a pull request. All contributions are welcome!

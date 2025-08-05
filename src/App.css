@@ -175,49 +175,7 @@ button:hover {
   align-items: center;
   margin-bottom: 10px;
 }
-@media (max-width: 360px) {
-  .container {
-    margin: 0;
-    border-radius: 0;
-  }
-  
-  .header {
-    padding: 8px 12px;
-  }
-  
-  .logo-text {
-    font-size: 18px;
-  }
-  
-  .logo-subtitle {
-    font-size: 12px;
-  }
-  
-  .body {
-    padding: 8px 12px;
-    gap: 8px;
-  }
-  
-  .bot-message,
-  .user-message {
-    font-size: 12px;
-    padding: 6px 10px;
-    max-width: 95%;
-  }
-  
-  .footer {
-    padding: 6px 10px;
-  }
-  
-  .message-input {
-    font-size: 12px;
-    padding: 6px 8px;
-  }
-  
-  .send-button {
-    padding: 4px 6px;
-  }
-}
+ 
 @media (max-width: 1024px) {
   .container {
     max-width: 90%;
@@ -233,13 +191,21 @@ button:hover {
   .container {
     margin: 0;
     height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile browsers */
     max-width: none;
     border-radius: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
   
   .header {
     padding: 12px 20px;
     flex-shrink: 0;
+    position: relative;
+    z-index: 10;
   }
   
   .logo-text {
@@ -254,8 +220,9 @@ button:hover {
   .body {
     padding: 16px 20px;
     gap: 16px;
-    min-height: 0;
     flex: 1;
+    overflow-y: auto;
+    min-height: 0;
   }
   
   .bot-message,
@@ -279,6 +246,9 @@ button:hover {
   .footer {
     padding: 10px 16px;
     flex-shrink: 0;
+    position: relative;
+    z-index: 10;
+    background-color: #2f3542;
   }
   
   .top-section {
@@ -293,12 +263,20 @@ button:hover {
   .container {
     margin: 0;
     height: 100vh;
+    height: 100dvh; /* Dynamic viewport height for mobile browsers */
     border-radius: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
   
   .header {
     padding: 10px 16px;
     flex-shrink: 0;
+    position: relative;
+    z-index: 10;
   }
   
   .logo-text {
@@ -312,8 +290,9 @@ button:hover {
   .body {
     padding: 10px 16px;
     gap: 10px;
-    min-height: 0;
     flex: 1;
+    overflow-y: auto;
+    min-height: 0;
   }
   
   .bot-message,
@@ -327,6 +306,9 @@ button:hover {
   .footer {
     padding: 8px 14px;
     flex-shrink: 0;
+    position: relative;
+    z-index: 10;
+    background-color: #2f3542;
   }
   
   .chat-form {
@@ -394,6 +376,7 @@ button:hover {
   }
 }
 
+/* Landscape orientation adjustments for mobile */
 @media (max-height: 500px) and (orientation: landscape) {
   .container {
     height: 100vh;

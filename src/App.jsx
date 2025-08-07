@@ -1,4 +1,3 @@
-// src/App.jsx
 import { useState, useRef, useEffect } from 'react';
 import ChatMessage from "./component/ChatMessage";
 import ChatForm from "./component/ChatForm";
@@ -39,25 +38,36 @@ const App = () => {
 
     try {
       const response = await fetch(import.meta.env.VITE_API_URL, requestOptions);
-      const data = await response.json();
+
+      const rawText = await response.clone().text();
+      console.log("Raw API response:", rawText);
 
       if (!response.ok) {
-        throw new Error(data.error?.message || 'Failed to generate response');
+        throw new Error(`API Error: ${rawText}`);
       }
 
-      let apiResponse = data.candidates[0].content.parts[0].text.replace(/<[^>]+>/g, '').trim();
+      if (!rawText) {
+        throw new Error("Empty response body received from API.");
+      }
 
-      // Remove placeholder if it appears
-      if (apiResponse.toLowerCase().includes("placeholder response")) {
+      let data;
+      try {
+        data = JSON.parse(rawText);
+      } catch (err) {
+        throw new Error("Invalid JSON format in response.");
+      }
+
+      const apiResponse = data.candidates?.[0]?.content?.parts?.[0]?.text?.replace(/<[^>]+>/g, '').trim();
+
+      if (!apiResponse || apiResponse.toLowerCase().includes("placeholder response")) {
         console.warn("Placeholder response received, skipping...");
         return;
       }
-      if (!apiResponse.toLowerCase().includes("placeholder")) {
-        updateHistory(apiResponse);
-      }
+
+      updateHistory(apiResponse);
 
     } catch (error) {
-      console.error("Error generating response:", error);
+      console.error("Error generating response:", error.message);
 
       let errorText = "❌ Failed to get a response from AI.";
       if (error.message.toLowerCase().includes("overloaded")) {
@@ -71,7 +81,6 @@ const App = () => {
   };
 
   useEffect(() => {
-    // Scroll to bottom when chat history updates
     if (chatBodyRef.current) {
       chatBodyRef.current.scrollTo({
         top: chatBodyRef.current.scrollHeight,
@@ -82,7 +91,6 @@ const App = () => {
 
   return (
     <div className="container">
-      {/* Header */}
       <div className="header">
         <div className="header-info">
           <h1 className="logo-text"><Bot/> ResumeBot</h1>
@@ -92,14 +100,12 @@ const App = () => {
         </div>
       </div>
 
-      {/* Chat Body */}
       <div ref={chatBodyRef} className="body">
         {chatHistory.map((chat, index) => (
           <ChatMessage key={index} chat={chat} />
         ))}
       </div>
 
-      {/* Chat Input */}
       <div className="footer">
         <ChatForm
           chatHistory={chatHistory}

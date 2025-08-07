@@ -191,7 +191,7 @@ button:hover {
   .container {
     margin: 0;
     height: 100vh;
-    height: 100dvh; /* Dynamic viewport height for mobile browsers */
+    height: 100dvh; 
     max-width: none;
     border-radius: 0;
     position: fixed;
@@ -263,7 +263,7 @@ button:hover {
   .container {
     margin: 0;
     height: 100vh;
-    height: 100dvh; /* Dynamic viewport height for mobile browsers */
+    height: 100dvh;
     border-radius: 0;
     position: fixed;
     top: 0;
@@ -376,7 +376,6 @@ button:hover {
   }
 }
 
-/* Landscape orientation adjustments for mobile */
 @media (max-height: 500px) and (orientation: landscape) {
   .container {
     height: 100vh;

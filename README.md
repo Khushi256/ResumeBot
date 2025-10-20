@@ -1,4 +1,4 @@
-# ResumeBot 💼🤖
+# ResumeBot 
 
 **AI-Powered Resume Generator using Gemini API**
 
@@ -13,7 +13,6 @@ ResumeBot is a smart and intuitive resume builder that collects user information
 -  AI Resume Assistant using Gemini API
 -  Conversational form input via chatbot
 -  Supports output in **Markdown** or **LaTeX**
--  Easy **PDF download** with styling preserved
 -  Generates resumes that are **ATS-friendly**
 -  Clean UI with modern design
 
@@ -33,7 +32,6 @@ ResumeBot is a smart and intuitive resume builder that collects user information
 
 - **Frontend**: React.js, Tailwind CSS
 - **AI Integration**: Gemini API
-- **PDF Generation**: jsPDF + html2canvas (for HTML), or LaTeX rendering
 - **State Management**: useState, useEffect, useRef (React Hooks)
 
 ---
